@@ -13,3 +13,15 @@ Run the Agent.
 ```bash
 uv run ./main.py
 ```
+
+## Environment Variables
+.env
+```env
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_API_KEY=<API_KEY>
+LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
+LANGCHAIN_PROJECT=<PROJECT_NAME>
+MODEL_BASE_URL=http://127.0.0.1:11434
+MODEL_NAME=gpt-oss:20b
+LLM_PROVIDER=ollama
+```
