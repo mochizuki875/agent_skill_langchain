@@ -1,21 +1,19 @@
 from pathlib import Path
 from dotenv import load_dotenv
 from langchain.agents import create_agent
-from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
 from langchain.tools import tool
 import subprocess
 import os
 from typing import Optional, List, Dict
-from pathlib import Path
 import yaml
+
+# Application run name
+RUN_NAME="agent_skill"
 
 # Load environment variables from .env file
 env_path = Path(__file__).parent / '.env'
 load_dotenv(dotenv_path=env_path)
-
-# Application run name
-RUN_NAME="agent_skill"
 
 # Initialize LLM Model based on provider
 # LLM Provider Selection (set via environment variable or default to ollama)
